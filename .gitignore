@@ -28,3 +28,6 @@
 #*.iml
 #modules.xml
 #.idea/modules.xml
+
+# Generated files
+out/

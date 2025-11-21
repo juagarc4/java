@@ -9,11 +9,12 @@ public class Sales {
         Order order1 = new Order();
         order1.addProduct(product1);
         order1.addProduct(product2);
-        order1.showOrder();
+        System.out.println(order1);
 
         Order order2 = new Order();
         order2.addProduct(product1);
         order2.addProduct(new Product("Cap", 40.00));
-        order2.showOrder();
+        order2.addProduct(product2);
+        System.out.println(order2);
     }
 }

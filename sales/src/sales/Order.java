@@ -29,12 +29,20 @@ public class Order {
         return total;
     }
 
-    public void showOrder() {
-        System.out.printf("Order ID: %d", this.idOrder);
-        System.out.printf("\n\tTotal: %s", this.totalOrder());
-        System.out.println("\n\tOrder products:");
+//    public void showOrder() {
+//        System.out.printf("Order ID: %d", this.idOrder);
+//        System.out.printf("\n\tTotal: %s", this.totalOrder());
+//        System.out.println("\n\tOrder products:");
+//        for(int i=0; i < this.counterProducts; i++ ) {
+//            System.out.printf("\t\t%s\n", this.products[i]);
+//        }
+//    }
+    public String toString() {
+        String result ="Order ID: " + this.idOrder + "\n\tTotal: " +  this.totalOrder() + "\n\tOrder products:\n";
+
         for(int i=0; i < this.counterProducts; i++ ) {
-            System.out.printf("\t\t%s\n", this.products[i]);
+            result += "\t\t" + this.products[i] + "\n";
         }
+        return result;
     }
 }
