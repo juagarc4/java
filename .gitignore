@@ -1,32 +1,30 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
-.idea/
-*.iml
+# Ignore all files in the .idea folder
+.idea/*
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Except for the following:
+!.idea/codeStyles
+!.idea/fileTemplates
+!.idea/inspectionProfiles
+!.idea/keymaps
+!.idea/libraries
+!.idea/modules.xml
+!.idea/vcs.xml
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Ignore OS-specific files
+.idea/**/Desktop.xml
+.idea/**/Find.xml
+.idea/**/Usage Statistics.xml
+.idea/**/Deployment.xml
+.idea/**/dataSources
+.idea/**/dataSources.local.xml
+.idea/**/databaseDrivers
+.idea/**/databaseServers.xml
+.idea/**/sqlDataSources.xml
+.idea/**/sqlDialects.xml
+.idea/**/webServers.xml
+.idea/**/jsLibraryMappings.xml
 
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
+# Ignore .iml files (module files) if you use Maven or Gradle
+#*.iml
+#modules.xml
+#.idea/modules.xml
