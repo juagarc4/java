@@ -1,4 +1,4 @@
-# Sales-app
+# Variable Arguments
 
 This is a small java app to refresh Java knowledge. It was built during the course 
 "Universidad Java - Cero a Experto - Actualizado (+155 hrs)" 
