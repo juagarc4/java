@@ -14,3 +14,4 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
 * snacksmachine2: Small app simulating a snack machine to practice the use of collections. This version uses a
   multilayer architecture and persistent data using files.
 * files: Practicing to read and write files.
+* ZoneFit: Small app using Database connections with JDBC and MySql. It uses Maven to manage dependencies.
