@@ -1,6 +1,6 @@
-package main.java.zone_fit.data;
+package zone_fit.data;
 
-import main.java.zone_fit.domain.Client;
+import zone_fit.domain.Client;
 
 import java.util.List;
 

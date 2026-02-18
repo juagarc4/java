@@ -1,6 +1,6 @@
-package main.java.zone_fit.data;
+package zone_fit.data;
 
-import main.java.zone_fit.domain.Client;
+import zone_fit.domain.Client;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static main.java.zone_fit.connection.DbConnection.getConnection;
+import static zone_fit.connection.DbConnection.getConnection;
 
 public class ClientDAO implements IClientDAO {
 

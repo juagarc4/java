@@ -1,4 +1,4 @@
-package main.java.zone_fit.domain;
+package zone_fit.domain;
 
 import java.util.Objects;
 

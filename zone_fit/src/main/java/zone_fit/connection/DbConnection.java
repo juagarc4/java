@@ -1,4 +1,4 @@
-package main.java.zone_fit.connection;
+package zone_fit.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

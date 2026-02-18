@@ -1,8 +1,8 @@
-package main.java.zone_fit.presentation;
+package zone_fit.presentation;
 
-import main.java.zone_fit.data.ClientDAO;
-import main.java.zone_fit.data.IClientDAO;
-import main.java.zone_fit.domain.Client;
+import zone_fit.data.ClientDAO;
+import zone_fit.data.IClientDAO;
+import zone_fit.domain.Client;
 
 import java.util.List;
 import java.util.Scanner;

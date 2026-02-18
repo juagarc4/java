@@ -15,3 +15,4 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
   multilayer architecture and persistent data using files.
 * files: Practicing to read and write files.
 * zone_fit: Small app using Database connections with JDBC and MySql. It uses Maven to manage dependencies.
+* zone_fit_spring: The same application zone_fit, but using Spring, Lombok and JPA with Hibernate.
