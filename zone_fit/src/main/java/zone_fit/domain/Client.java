@@ -22,7 +22,7 @@ public class Client {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -30,7 +30,7 @@ public class Client {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -38,7 +38,7 @@ public class Client {
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     public void setLastName(String lastName) {
@@ -46,7 +46,7 @@ public class Client {
     }
 
     public int getMembership() {
-        return membership;
+        return this.membership;
     }
 
     public void setMembership(int membership) {
@@ -56,17 +56,17 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", membership=" + membership +
+                "id=" + this.id +
+                ", firstName='" + this.firstName + '\'' +
+                ", lastName='" + this.lastName + '\'' +
+                ", membership=" + this.membership +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Client client)) return false;
-        return id == client.id && membership == client.membership && Objects.equals(firstName, client.firstName) && Objects.equals(lastName, client.lastName);
+        return id == client.id && this.membership == client.membership && Objects.equals(this.firstName, client.firstName) && Objects.equals(this.lastName, client.lastName);
     }
 
     @Override

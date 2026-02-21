@@ -1,6 +1,7 @@
-# ZoneFit Spring
+# ZoneFit Spring Swing
 
-This is a small java app to manage a Gym. This app does the same as zone_fit but using Spring and Spring Boot.
+This is a small java app to manage a Gym. This app does the same as zone_fit_spring but using Swing for the user
+interface.
 
 It was built during the course "Universidad Java - Cero a Experto - Actualizado (+155 hrs)"
 from Global Mentoring: Ing. Ubaldo Acosta and Ing. Marcela Gamiño

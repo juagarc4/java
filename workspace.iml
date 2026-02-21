@@ -9,8 +9,10 @@
       <sourceFolder url="file://$MODULE_DIR$/snacksmachine/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/snacksmachine2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/files/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/swing/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/zone_fit/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/zone_fit_spring/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zone_fit_spring_swing/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
     <orderEntry type="inheritedJdk" />

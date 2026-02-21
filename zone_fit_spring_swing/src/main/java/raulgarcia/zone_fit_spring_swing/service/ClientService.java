@@ -1,11 +1,11 @@
-package raulgarcia.zone_fit_spring.service;
+package raulgarcia.zone_fit_spring_swing.service;
 
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import raulgarcia.zone_fit_spring.model.Client;
-import raulgarcia.zone_fit_spring.repository.ClientRepository;
+import raulgarcia.zone_fit_spring_swing.model.Client;
+import raulgarcia.zone_fit_spring_swing.repository.ClientRepository;
 
 import java.util.List;
 
@@ -17,12 +17,12 @@ public class ClientService implements IClientService {
 
     @Override
     public List<Client> listClients() {
-        return this.clientRepository.findAll();
+        return clientRepository.findAll();
     }
 
     @Override
     public Client searchClientById(Integer clientId) {
-        return this.clientRepository
+        return clientRepository
                 .findById(clientId)
                 .orElseThrow(() -> new RuntimeException("Client with id " + clientId + " not found."));
     }
@@ -30,7 +30,7 @@ public class ClientService implements IClientService {
     @Override
     public void saveClient(Client client) {
         try {
-            this.clientRepository.save(client);
+            clientRepository.save(client);
             logger.info("Client saved successfully");
         } catch (Exception e) {
             throw new RuntimeException("Error saving client" + e.getMessage());
@@ -39,9 +39,9 @@ public class ClientService implements IClientService {
 
     @Override
     public void deleteClient(Client client) {
-        this.clientRepository.delete(client);
+        clientRepository.delete(client);
         try {
-            this.clientRepository.delete(client);
+            clientRepository.delete(client);
             logger.info("Client deleted successfully");
         } catch (Exception e) {
             throw new RuntimeException("Error deleting client" + e.getMessage());

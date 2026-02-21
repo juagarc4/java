@@ -81,7 +81,7 @@ public class ZoneFitApplication implements CommandLineRunner {
 
     private void listClients() {
         logger.info("{}--- List of clients ---", nl);
-        List<Client> clients = clientService.listClients();
+        List<Client> clients = this.clientService.listClients();
         clients.forEach(client -> logger.info(client.toString()));
     }
 
@@ -89,7 +89,7 @@ public class ZoneFitApplication implements CommandLineRunner {
         logger.info("{}--- Search client by Id--", nl);
         System.out.print("Enter a client ID: ");
         int clientId = Integer.parseInt(console.nextLine());
-        Client client = clientService.searchClientById(clientId);
+        Client client = this.clientService.searchClientById(clientId);
         logger.info(client.toString());
     }
 
@@ -107,7 +107,7 @@ public class ZoneFitApplication implements CommandLineRunner {
         client.setFirstName(firstName);
         client.setLastName(lastName);
         client.setMembership(membership);
-        clientService.saveClient(client);
+        this.clientService.saveClient(client);
         listClients();
     }
 
@@ -141,7 +141,7 @@ public class ZoneFitApplication implements CommandLineRunner {
             System.out.print("Proceed (Y/N): ");
             String proceedOption = console.nextLine();
             if ("y".equalsIgnoreCase(proceedOption)) {
-                clientService.saveClient(client);
+                this.clientService.saveClient(client);
             } else {
                 logger.info("{}INFO: Client update has been canceled. All changes have been ignored", nl);
             }
@@ -159,8 +159,8 @@ public class ZoneFitApplication implements CommandLineRunner {
         System.out.print("Proceed with deletion(Y/N): ");
         String proceedOption = console.nextLine();
         if ("y".equalsIgnoreCase(proceedOption)) {
-            Client client = clientService.searchClientById(clientId);
-            clientService.deleteClient(client);
+            Client client = this.clientService.searchClientById(clientId);
+            this.clientService.deleteClient(client);
         } else {
             logger.info("{}INFO: Client removal has been canceled.", nl);
         }
