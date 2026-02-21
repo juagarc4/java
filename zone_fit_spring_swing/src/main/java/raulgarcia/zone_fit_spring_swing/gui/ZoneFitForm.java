@@ -87,6 +87,7 @@ public class ZoneFitForm extends JFrame {
         };
         this.clientsTableModel.setColumnIdentifiers(headers);
         this.clientsTable = new JTable(clientsTableModel);
+        this.clientsTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         configureTableAlignment();
         loadClientsData();
     }
