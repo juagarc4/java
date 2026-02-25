@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Zona Fit (GYM)</title>
+    <h:outputStylesheet library="webjars" name="primeflex/3.3.1/primeflex.min.css"/>
+</h:head>
+
+<h:body>
+    <div class="text-center mb-4 p-2 border-none shadow-2 bg-yellow-500">
+        <h3 class="m-0 text-900 font-bold" style="font-size: 2rem">Zone Fit Web (GYM)</h3>
+    </div>
+    <h:form id="form-clients">
+        <p:growl id="messages" showDetail="true"/>
+        <p:toolbar styleClass="mb-4">
+            <p:toolbarGroup>
+                <p:commandButton value="Home" icon="pi pi-home"
+                                 actionListener="#{indexController.loadClients}"
+                                 update=":form-clients:table-clients :form-clients:messages"
+                                 styleClass="ui-button-flat"/>
+            </p:toolbarGroup>
+
+            <p:toolbarGroup align="right">
+                <p:commandButton value="New Client" icon="pi pi-plus"
+                                 actionListener="#{indexController.addClient}"
+                                 update=":form-modal:dialog-client"
+                                 oncomplete="PF('clientDialog').show()"
+                                 styleClass="ui-button-success"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+
+        <div class="flex justify-content-between align-items-center bg-white p-3 mb-3 shadow-1 border-round">
+            <span class="text-xl font-bold text-center flex-1">CLIENTS LIST</span>
+            <p:commandButton icon="pi pi-refresh"
+                             actionListener="#{indexController.loadClients}"
+                             update=":form-clients:table-clients :form-clients:messages"
+                             process="@this"
+                             styleClass="rounded-button ui-button-flat"/>
+        </div>
+        <p:dataTable value="#{indexController.clients}" var="client"
+                     id="table-clients" widgetVar="clientsTable"
+                     stripedRows="true" paginator="true" rows="10"
+                     paginatorPosition="bottom">
+
+            <p:column headerText="ID" style="width: 3rem">
+                <h:outputText value="#{client.id}"/>
+            </p:column>
+
+            <p:column headerText="First Name">
+                <h:outputText value="#{client.firstName}"/>
+            </p:column>
+
+            <p:column headerText="Last Name">
+                <h:outputText value="#{client.lastName}"/>
+            </p:column>
+
+            <p:column headerText="Membership" style="width: 5rem; text-align: center">
+                <p:tag value="#{client.membership}" severity="info"/>
+            </p:column>
+
+            <p:column headerText="Actions" style="width: 5rem; text-align: center">
+                <p:commandButton icon="pi pi-pencil"
+                                 process="@this"
+                                 actionListener="#{indexController.editClient(client)}"
+                                 update=":form-modal:dialog-client"
+                                 oncomplete="PF('clientDialog').show()"
+                                 styleClass="rounded-button ui-button-success ui-button-flat"/>
+                <p:commandButton icon="pi pi-trash"
+                                 styleClass="rounded-button ui-button-danger ui-button-flat"
+                                 process="@this"
+                                 oncomplete="PF('deleteClientDialog').show()">
+                    <f:setPropertyActionListener value="#{client}" target="#{indexController.clientSelected}"/>
+                </p:commandButton>
+            </p:column>
+
+        </p:dataTable>
+    </h:form>
+    <h:form id="form-modal">
+        <p:dialog header="Client details"
+                  showEffect="fade"
+                  modal="true"
+                  widgetVar="clientDialog"
+                  responsive="true">
+            <f:facet name="header">
+                <h:outputText
+                        value="#{indexController.clientSelected.id == null ? 'Nuevo Cliente' : 'Editar Cliente'}"/>
+            </f:facet>
+            <p:outputPanel id="dialog-client" class="ui-fluid">
+                <h:panelGroup layout="block" rendered="#{not empty indexController.clientSelected}">
+                    <div class="field col-12">
+                        <p:outputLabel for="firstName" class="font-bold">First Name</p:outputLabel>
+                        <p:inputText id="firstName" value="#{indexController.clientSelected.firstName}"
+                                     required="true"/>
+                    </div>
+
+                    <div class="field col-12">
+                        <p:outputLabel for="lastName" class="font-bold">Last Name</p:outputLabel>
+                        <p:inputText id="lastName" value="#{indexController.clientSelected.lastName}" required="true"/>
+                    </div>
+
+                    <div class="field col-12">
+                        <p:outputLabel for="membership" class="font-bold">Membership</p:outputLabel>
+                        <p:inputNumber id="membership" value="#{indexController.clientSelected.membership}"
+                                       decimalPlaces="0" required="true"/>
+                    </div>
+                </h:panelGroup>
+            </p:outputPanel>
+            <f:facet name="footer">
+                <p:commandButton value="Save" icon="pi pi-check"
+                                 actionListener="#{indexController.saveClient}"
+                                 update="dialog-client" process="dialog-client @this"/>
+                <p:commandButton value="Cancel" icon="pi pi-times" onclick="PF('clientDialog').hide()"
+                                 class="ui-button-secondary" type="button"/>
+            </f:facet>
+        </p:dialog>
+    </h:form>
+    <h:form id="form-delete">
+        <p:confirmDialog widgetVar="deleteClientDialog" showEffect="fade" width="300"
+                         header="Confirm" severity="warn">
+            <f:facet name="message">
+                <h:outputText value="This operation can not be undone." styleClass="font-bold block mb-2"/>
+                <h:outputText value="Do you really want to delete this client?"/>
+            </f:facet>
+            <p:commandButton value="Yes" icon="pi pi-check"
+                             process="@this"
+                             actionListener="#{indexController.deleteClient}"
+                             oncomplete="PF('deleteClientDialog').hide()"/>
+            <p:commandButton value="No" type="button" styleClass="ui-button-secondary"
+                             icon="pi pi-times" onclick="PF('deleteClientDialog').hide()"/>
+        </p:confirmDialog>
+    </h:form>
+</h:body>
+</html>

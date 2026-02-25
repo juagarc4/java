@@ -19,3 +19,5 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
 * swing: Test of Swing UI. Login Form.
 * zone_fit_spring_swing: The same application zone_fit_spring, but using Swing for the user interface, Lombok and JPA
   with Hibernate.
+* zone_fit_spring_web_jsf: The application zone_fit_spring converted to web application, but using  
+  JSF and PrimeFaces.
