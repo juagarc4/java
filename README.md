@@ -21,3 +21,4 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
   with Hibernate.
 * zone_fit_spring_web_jsf: The application zone_fit_spring converted to web application, but using  
   JSF and PrimeFaces.
+* tasks_javafx: Task application made with Spring Boot and JavaFX. 

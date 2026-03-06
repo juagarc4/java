@@ -5,14 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import raulgarcia.zone_fit_spring_swing.model.Client;
-import raulgarcia.zone_fit_spring_swing.repository.ClientRepository;
+import raulgarcia.zone_fit_spring_swing.repository.IClientRepository;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class ClientService implements IClientService {
-    private final ClientRepository clientRepository;
+    private final IClientRepository clientRepository;
     private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
     @Override

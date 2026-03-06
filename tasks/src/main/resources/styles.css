@@ -1,0 +1,19 @@
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #d1d1d1;
+}
+
+.table-row-cell {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+.table-row-cell.done {
+    -fx-background-color: #f9f9f9;
+    -fx-font-style: italic;
+}
+
+.table-row-cell.done .text {
+    -fx-fill: #999999;
+    -fx-strikethrough: true;
+}
