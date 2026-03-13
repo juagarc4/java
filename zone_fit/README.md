@@ -9,12 +9,13 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
 # Database
 
 A docker-compose.yml file is provided to provision a MariaDB database in a docker container.  
-Run **docker composer up -d**  to start the database.
+Run **docker compose up -d**  to start the database.
 
 Use the url http://localhost:8080/ to access the admin interface (adminer) to manage the databases.
 
-1. Create a new database "zone_fit"
-2. Add a new table using the follow SQL COMMAND:
+1. Create a new database "zonefit_db" if it doesn't exist.
+2. Add a new table `clients`, if it doesn't exist or if you want to replace your existent one, using the follow SQL
+   COMMAND:
 
 ```
 SET NAMES utf8;

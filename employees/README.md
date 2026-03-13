@@ -1,6 +1,6 @@
-# ZoneFit Spring
+# Employees System
 
-This is a small java app to manage a Gym. This app does the same as zone_fit but using Spring and Spring Boot.
+This is a small java app to manage an Employees System. This app is a web app using JSPs and Spring Boot.
 
 It was built during the course "Universidad Java - Cero a Experto - Actualizado (+155 hrs)"
 from Global Mentoring: Ing. Ubaldo Acosta and Ing. Marcela Gamiño
@@ -13,5 +13,5 @@ Run **docker compose up -d**  to start the database.
 
 Use the url http://localhost:8080/ to access the admin interface (adminer) to manage the databases.
 
-The app will create a new database `zonefit_db` if it doesn't exist.
-A table `clients` will be crated automatically if it doesn't exist.```
+1. A new database "employees_db" will be created automatically, if it doesn't exist.
+2. The table employees will be created automatically.

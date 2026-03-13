@@ -7,7 +7,7 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
 
 ### Modules
 
-* sales: Small app simulating orders and products to practice OOP concepts like encapsulation or polimorphism.
+* sales: Small app simulating orders and products to practice OOP concepts like encapsulation or polymorphism.
 * varargs: Refreshing variable arguments.
 * advancedconcepts: Using Collections like Lists, Maps and Sets
 * snacksmachine: Small app simulating a snack machine to practice the use of collections.
@@ -21,4 +21,17 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
   with Hibernate.
 * zone_fit_spring_web_jsf: The application zone_fit_spring converted to web application, but using  
   JSF and PrimeFaces.
-* tasks_javafx: Task application made with Spring Boot and JavaFX. 
+* tasks_javafx: Task application made with Spring Boot and JavaFX.
+* employees_system: Employees application using Spring boot and JSP.
+
+# Database
+
+A docker-compose.yml file is provided to provision a MariaDB database in a docker container.  
+Run **docker compose up -d**  to start the database.
+
+Use the url http://localhost:8080/ to access the admin interface (adminer) to manage the databases.
+
+The app will create a new database tasks_db if it doesn't exist.
+
+Adminer port: 8081
+MariaDB port: 3306
