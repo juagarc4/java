@@ -22,7 +22,8 @@ Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6q
 * zone_fit_spring_web_jsf: The application zone_fit_spring converted to web application, but using  
   JSF and PrimeFaces.
 * tasks_javafx: Task application made with Spring Boot and JavaFX.
-* employees_system: Employees application using Spring boot and JSP.
+* employees: Employees System application using Spring Boot and JSP.
+* contacts: Contacts System application using Spring Boot, JPA and Thymeleaf.
 
 # Database
 

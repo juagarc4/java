@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-th-replace="~{common/head :: head(title=${title})}"></head>
+<body class="d-flex flex-column min-vh-100">
+<header data-th-replace="~{common/header :: header}"></header>
+
+<main class="flex-fill pt-3 pb-3" data-th-insert="~{__${view}__ :: content}"></main>
+
+<footer data-th-replace="~{common/footer :: footer}"></footer>
+<div data-th-replace="~{common/bottom :: bottom}"></div>
+</body>
+</html>

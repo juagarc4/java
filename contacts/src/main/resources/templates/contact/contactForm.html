@@ -1,0 +1,36 @@
+<form data-th-fragment="form" data-th-action="@{/contacts/save}" data-th-object="${contact}" method="post"
+      class="row g-3" novalidate>
+    <input type="hidden" data-th-field="*{id}">
+    <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" data-th-field="*{firstName}" required>
+        <div class="invalid-feedback">
+            Please provide a value.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" data-th-field="*{lastName}" required>
+        <div class="invalid-feedback">
+            Please provide a value.
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" data-th-field="*{phone}" required>
+        <div class="invalid-feedback">
+            Please provide a value.
+        </div>
+    </div>
+    <div class="col-md-8">
+        <label for="email" class="form-label">E-Mail</label>
+        <input type="text" class="form-control" id="email" data-th-field="*{email}" required>
+        <div class="invalid-feedback">
+            Please provide a value.
+        </div>
+    </div>
+    <div class="col-12  text-center">
+        <button type="submit" class="btn btn-warning btn-md me-3">Save</button>
+        <a data-th-href="@{/contact}" class="btn btn-danger btn-md">Back</a>
+    </div>
+</form>
