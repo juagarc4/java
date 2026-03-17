@@ -1,0 +1,79 @@
+<div class="container mt-4" style="max-width: 900px">
+  <div class="h3 text-center mb-5">Add Product</div>
+
+  <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    @if (errorMessage) {
+      <div class="row mt-4 justify-content-center">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="alert alert-danger py-2">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i> {{ errorMessage }}
+            @if (errorDetails.length > 0) {
+              <ul class="mb-0 small">
+                @for (detail of errorDetails; track $index) {
+                  <li>{{ detail }}</li>
+                }
+              </ul>
+            }
+          </div>
+        </div>
+      </div>
+    }
+    <input formControlName="id" type="hidden" />
+    <div class="row mb-3 justify-content-center">
+      <label for="sku" class="col-sm-2 col-form-label text-sm-start">SKU</label>
+      <div class="col-sm-6">
+        <input formControlName="sku" type="text" class="form-control" id="sku" />
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+      <label for="name" class="col-sm-2 col-form-label text-sm-start">Name</label>
+      <div class="col-sm-6">
+        <input formControlName="name" type="text" class="form-control" id="name" />
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+      <label for="description" class="col-sm-2 col-form-label text-sm-start">Description</label>
+      <div class="col-sm-6">
+        <textarea formControlName="description" id="description" rows="4" class="form-control"></textarea>
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+      <label for="stock" class="col-sm-2 col-form-label text-sm-start">Stock</label>
+      <div class="col-sm-6">
+        <div class="row g-3">
+          <div class="col-sm-5">
+            <input formControlName="stock" id="stock" type="number" class="form-control" />
+          </div>
+          <label for="min-stock" class="col-sm-2 col-form-label text-sm-start">Min.</label>
+          <div class="col-sm-5">
+            <input formControlName="minStock" id="min-stock" type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          @if (checkStockWarning()) {
+            <div class="alert alert-warning mt-2 small">
+              <i class="bi bi-exclamation-triangle"></i>
+              <strong>Warning:</strong> Stock is below Min.Stock. Please order more items of this product.
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3 justify-content-center">
+      <label for="unit-cost" class="col-sm-2 col-form-label text-sm-start">Price</label>
+      <div class="col-sm-6">
+        <input formControlName="unitCost" id="unit-cost" type="number" step="0.01" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-center">
+      <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn btn-warning px-4 me-2" [disabled]="productForm.invalid">Save</button>
+        <a routerLink="/products" class="btn btn-secondary px-4">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>

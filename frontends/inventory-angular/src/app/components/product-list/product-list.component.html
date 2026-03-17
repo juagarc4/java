@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="container text-center m-5">
+    <h3>Products available</h3>
+  </div>
+  <div class="container my-5 p-0">
+    <a routerLink="new" routerLinkActive="active" class="btn text-bg-success px-4">Add Product</a>
+  </div>
+  <table class="table table-stripe table-hover align-middle">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">#id</th>
+        <th scope="col">SKU</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Unit Cost</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Min. Stock</th>
+        <th scope="col">Last Updated</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track product.id) {
+        <tr>
+          <th scope="row">{{ product.id }}</th>
+          <td>{{ product.sku }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td class="text-center">{{ product.unitCost }} CHF</td>
+          <td class="text-center">{{ product.stock }}</td>
+          <td class="text-center">{{ product.minStock }}</td>
+          <td>{{ product.updatedAt | date: 'dd/MM/yyyy HH:mm' }}</td>
+          <td>
+            <div class="d-flex">
+              <button [routerLink]="['/products/edit', product.id]" class="btn btn-warning me-2">Edit</button>
+              <button (click)="onDelete(product.id!)" class="btn btn-danger">Delete</button>
+            </div>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="4">Loading products or no products found...</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

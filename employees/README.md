@@ -6,6 +6,11 @@ It was built during the course "Universidad Java - Cero a Experto - Actualizado 
 from Global Mentoring: Ing. Ubaldo Acosta and Ing. Marcela Gamiño
 Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6qVNCd_ovGua8Wax-uO2f751JGlixuESt/
 
+# Notes
+
+Although the app was built during the mentioned course. It contains more enterprise code, adding error handling and
+some other best practices followed by the industry.
+
 # Database
 
 A docker-compose.yml file is provided to provision a MariaDB database in a docker container.  

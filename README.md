@@ -5,6 +5,11 @@ They were built during the course "Universidad Java - Cero a Experto - Actualiza
 from Global Mentoring: Ing. Ubaldo Acosta and Ing. Marcela Gamiño
 Udemy URL: https://www.udemy.com/share/101Wlw3@Z_HAS54ERKRDzTcb-KtiTPcpTuyzFSQ6qVNCd_ovGua8Wax-uO2f751JGlixuESt/
 
+# Notes
+
+Although the apps were built during the mentioned course. More of them contain more enterprise code, adding error
+handling and some other best practices followed by the industry.
+
 ### Modules
 
 * sales: Small app simulating orders and products to practice OOP concepts like encapsulation or polymorphism.

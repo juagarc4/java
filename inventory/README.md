@@ -1,6 +1,7 @@
-# Contacts System
+# Inventory Management
 
-This is a small java app to manage a Contacts System. This app is a web app using Thymeleaf, JPA and Spring Boot.
+This is a small java app to manage an Inventory System. This app is a web app using Spring Boot, JPA and Angulas as
+frontend.
 
 It was built during the course "Universidad Java - Cero a Experto - Actualizado (+155 hrs)"
 from Global Mentoring: Ing. Ubaldo Acosta and Ing. Marcela Gamiño
@@ -18,5 +19,5 @@ Run **docker compose up -d**  to start the database.
 
 Use the url http://localhost:8080/ to access the admin interface (adminer) to manage the databases.
 
-1. A new database "contacts_db" will be created automatically, if it doesn't exist.
-2. The table contacts will be created automatically.
+1. A new database "employees_db" will be created automatically, if it doesn't exist.
+2. The table employees will be created automatically.
