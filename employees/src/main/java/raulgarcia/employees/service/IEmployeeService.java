@@ -10,8 +10,7 @@ public interface IEmployeeService {
 
     Optional<Employee> getEmployeeById(Integer id);
 
-    void saveEmployee(Employee employee);
+    Employee saveEmployee(Employee employee);
 
     void deleteEmployeeById(Integer id);
-
 }

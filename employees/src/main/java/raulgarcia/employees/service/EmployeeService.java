@@ -29,10 +29,11 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public void saveEmployee(Employee employee) {
+    public Employee saveEmployee(Employee employee) {
         try {
             Employee employeeSaved = employeeRepository.save(employee);
             logger.info("Employee with ID {} saved successfully", employeeSaved.getId());
+            return employeeSaved;
         } catch (Exception e) {
             logger.error("Database error while saving employee: {}", e.getMessage());
             throw new RuntimeException("Error saving used in the database", e);
@@ -41,7 +42,9 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void deleteEmployeeById(Integer id) {
+
         employeeRepository.deleteById(id);
     }
+
 
 }

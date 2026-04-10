@@ -1,4 +1,4 @@
-# Forntends
+# Frontends
 
 This folder contains the frontend implemented for some of the java applications
 
@@ -14,3 +14,4 @@ and some other best practices followed by the industry.
 # Frontends
 
 - inventory-angular: the frontend built in Angular for the application "inventory".
+- employees-react: the frontend built in React for the application "employees".

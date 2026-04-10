@@ -26,6 +26,10 @@ public class Employee {
     private String department;
     @NotEmpty(message = "Position is required")
     private String position;
-    @Min(value = 0, message = "Salary mut be higher than 0")
+    @Min(value = 0, message = "Salary must be higher than 0")
     private Double salary;
+
+    public void assignIdForUpdate(Integer id) {
+        this.id = id;
+    }
 }
