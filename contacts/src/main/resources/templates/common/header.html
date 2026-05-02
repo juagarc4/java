@@ -1,5 +1,10 @@
 <header class="bg-dark" data-th-fragment="header">
     <div class="container">
         <div data-th-replace="~{common/navbar :: navbar}"></div>
+        <label data-th-text="#{lang.change}" for="locales"></label>
+        <select id="locales">
+            <option value="en" data-th-text="#{lang.eng}" data-th-selected="${#locale.language == 'en'}"></option>
+            <option value="es" data-th-text="#{lang.es}" data-th-selected="${#locale.language == 'es'}"></option>
+        </select>
     </div>
 </header>

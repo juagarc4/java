@@ -1,6 +1,6 @@
 <div class="container" data-th-fragment="content">
     <div class="text-center" style="margin:30px">
-        <h3>Contacts List</h3>
+        <h3 data-th-text="#{label.contacts}">Contacts List</h3>
     </div>
     <div class="container">
         <div class="table-responsive">
@@ -27,11 +27,12 @@
                         <div class="d-flex">
 
                             <a class="btn btn-primary me-2"
-                               data-th-href="@{/contacts/edit(contact=${contact.id})}">Edit</a>
+                               data-th-href="@{/contacts/edit(contact=${contact.id})}"
+                               data-th-text="#{btn.edit}">Edit</a>
                             <form data-th-action="@{/contacts/delete}" method="post" style="display:inline;">
                                 <input type="hidden" name="contact" data-th-value="${contact.id}">
                                 <button type="submit" class="btn btn-danger"
-                                        onclick="return confirm('Are you sure?');">Delete
+                                        onclick="return confirm('Are you sure?');" data-th-text="#{btn.delete}">Delete
                                 </button>
                             </form>
                         </div>
